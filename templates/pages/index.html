@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    <div class="container">
+        <h2>User Authentication App</h2>
+        <hr>
+        {% if user.is_authenticated %}
+            <p>Name:{{ user.first_name }}</p>
+            <p>Username:{{ user.username }}</p>
+            <p>Email:{{ user.email }}</p>
+        {% endif %}
+    </div>
+{% endblock %}
